@@ -1,0 +1,7 @@
+DirectoryIndex index.php?r=user/login
+ErrorDocument 404 http://localhost/terminado/index.php?r=user/error
+RewriteEngine on
+RewriteRule ^index$ index.php?r=user/index [L]
+RewriteRule ^index/id/([0-9]+)$ index.php?r=user/index&id=$1 [L]
+RewriteRule ^index/id/([0-9]+)/title/([a-zA-Z]+)$ index.php?r=user/index&id=$1&title=$2 [L]
+RewriteRule ^login$ index.php?r=user/login [L]
